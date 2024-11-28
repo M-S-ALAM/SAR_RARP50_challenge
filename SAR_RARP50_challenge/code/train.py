@@ -451,7 +451,7 @@ class ModelTrainer:
     def save_results(self):
         df = pd.DataFrame(self.metrics)
         df.to_csv("training_metrics.csv", index=False)
-        torch.save(self.model.state_dict(), "unet_model.pth")
+        torch.save(self.model.state_dict(), "../plots/unet_model.pth")
         print("Training completed and metrics saved to 'training_metrics.csv'")
 
 
